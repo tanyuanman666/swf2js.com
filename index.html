@@ -1,20 +1,805 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: http://ogp.me/ns#">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>swf2js SWF/FlashをHTML5に変換、JavaScript製FlashPlayerエミュレーター</title>
-
   <meta content="swf2jsはJavaScriptでSWFファイルをリアルタイムで解析してcanvas(WebGL)に出力するJavaScript製のFlashPlayerエミュレーターです。" name="descriptison">
   <meta content="swf2js,flash,html,swf" name="keywords">
+
+  <!-- OGP -->
+  <meta property="og:title" content="swf2js SWF/FlashをHTML5に変換、JavaScript製FlashPlayerエミュレーター" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="swf2jsはJavaScriptでSWFファイルをリアルタイムで解析してcanvas(WebGL)に出力するJavaScript製のFlashPlayerエミュレーターです。" />
+  <meta property="og:url" content="https://swf2js.com" />
+  <meta property="og:site_name" content="swf2js SWF/FlashをHTML5に変換、JavaScript製FlashPlayerエミュレーター" />
+  <meta property="og:image" content="https://swf2js.com/assets/img/ogp/ogp_ja_image.jpg" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume - v2.1.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
-  <div>
-    <h1>in preparation...</h1>
-  </div>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about"><i class="bx bx-note"></i> <span>About</span></a></li>
+        <li><a href="#skills"><i class="bx bx-calendar"></i> <span>Milestones</span></a></li>
+        <li><a href="#services"><i class="bx bx-slideshow"></i> <span>Live Preview</span></a></li>
+        <li><a href="#resume"><i class="bx bx-question-mark"></i> <span>FAQ</span></a></li>
+        <li><a href="#portfolio"><i class="bx bx-detail"></i> <span>Achievements</span></a></li>
+        <li><a href="#testimonials"><i class="bx bx-group"></i> <span>Team</span></a></li>
+        <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <li><a href="en/index.html"><i class="bx bx-menu"></i> <span>English</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>swf2js</h1>
+      <p>
+        SWF/FlashをHTML5に変換<br>
+        HTMLに1行コードを記述するだけ!!<br>
+        <span class="typed" data-typed-items="swf2js.load('swfのURL');"></span>
+      </p>
+      <div class="social-links">
+        <a href="https://github.com/ienaga/swf2js" class="github"><i class="bx bxl-github"></i></a>
+        <a href="https://twitter.com/swf2js" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://swf2js.slack.com" class="slack"><i class="bx bxl-slack"></i></a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div>
+          <p>
+            2020年のAdobe Flash Playerサポート終了に伴い、全てのFlashコンテンツは2つの選択を迫られました。<br>
+            選択肢1「サービスの終了」/選択肢2「作り直す」<br>
+            swf2jsはFlashコンテンツをそのままHTML5化するという3つめの選択肢を選びました。<br>
+            <br>
+            Adobe Animate(Flash)はとても優れたオーサリングツールで、SWFファイルを通じた描画はとても軽量で美しい表現が可能です。<br>
+            これらの資産と技術はこれからのWeb業界でもまだまだ活躍できる技術です。<br>
+            <br>
+            swf2jsはSWFをリアルタイムで分解しHTMLの技術を用いてエミュレートするライブラリです。<br>
+            ブラウザの標準技術を採用する事でAdobe Flash Playerが抱えていた脆弱性の問題も大きく改善されています。<br>
+            そして、各ブラウザの進化と共に快適な環境を一緒に構築していくことができます。<br>
+            <br>
+            実装言語はJavaScriptを採用している為、導入も簡単にできます。<br>
+            サーバーにswf2js.jsを設置し、HTMLのコードに1行追加するだけでこれまでと何も変わらずにAdobe Animate(Flash)を利用してサービスの運用を行えます。<br>
+            <br>
+            Adobe Animate(Flash)と同じ機能を有しており、swf2jsのAPIを通じて自前のプログラムから操作する事で、新規にAdobe Animate(Flash)風のコンテンツを作る事も可能です。
+          </p>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Milestones Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Milestones</h2>
+          <p>
+            プロジェクトの進行状況です。
+          </p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6">
+
+            <div class="skills-title">
+              <h4>無料版(GitHub)</h4>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>ActionScript</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">ActionScript 1.0 <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">ActionScript 2.0 <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">ActionScript 3.0 <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Browser</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Chrome/Firefox/Safari/Edge(chromium) <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">iPhone/Android <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>HTML5</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WebGL <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WebWorker <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WebAudio <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Video</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">FLV <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">MP4 <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Audio</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">MP3 <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WAV <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Filters</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">DropShadow/Blur/Glow/Bevel <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Blend Mode</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Multiply/Screen/Lighten/Darken/Difference/Add/Subtract <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Compression</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">ZLIB <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">LZMA <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>3D</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Stage3D <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Assembly</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Adobe Graphics Assembly Language <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="skills-title">
+              <h4>有料版(β版)</h4>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>ActionScript</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">ActionScript 1.0 <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">ActionScript 2.0 <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">ActionScript 3.0 <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Browser</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Chrome/Firefox/Safari/Edge(chromium) <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">iPhone/Android <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>HTML5</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WebGL <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WebWorker <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WebAudio <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Video</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">FLV <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">MP4 <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Audio</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">MP3 <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WAV <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Filters</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">ALL Available. <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Blend Mode</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">ALL Available. <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Compression</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">ZLIB <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">LZMA <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>3D</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Stage3D <i class="val">10%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skills-item">
+              <i class="icofont-rounded-right"></i> <strong>Assembly</strong>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Adobe Graphics Assembly Language <i class="val">0%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End skills Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Live Preview</h2>
+          <p>デモページではSWFファイルを直接アップロード(ドロップ)して動作を確認頂けます。</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+            <a href="free/index.html">
+              <div class="icon-box iconbox-blue">
+                <div class="icon">
+                  <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
+                  </svg>
+                  <i class="bx bx-slideshow"></i>
+                </div>
+                <h4>ActionScript1.0/2.0</h4>
+                <h5>Free Version[GitHub]</h5>
+                <p>
+                  Browser: Chrome/Firefox/Safari/Edge(chromium)<br>
+                  PC: Windows10/Macintosh
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+            <a href="prod/index.html">
+              <div class="icon-box iconbox-orange ">
+                <div class="icon">
+                  <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
+                  </svg>
+                  <i class="bx bx-slideshow"></i>
+                </div>
+                <h4>ActionScript3.0</h4>
+                <h5>Production Version[β]</h5>
+                <p>
+                  Browser: Chrome/Firefox/Safari/Edge(chromium)<br>
+                  PC: Windows10/Macintosh
+                </p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="resume-item pb-0">
+              <h4>正式リリースはいつ頃の予定ですか？</h4>
+              <p><em>2020年8月頃を予定しております。</em></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="resume-item pb-0">
+              <h4>ActionScriptは使えますか？</h4>
+              <p><em>無料版はAS1.0、2.0が、有償版はAS3.0が利用可能です。</em></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="resume-item pb-0">
+              <h4>対応ブラウザを教えて下さい</h4>
+              <p><em>Chrome、Safari、FireFox、Edge(chromium)<br>Chromeでは比較的安定して動作しています。</em></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="resume-item pb-0">
+              <h4>スマートフォンには対応していますか？</h4>
+              <p><em>将来的に対応予定ですが、現時点では非対応です。</em></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="resume-item pb-0">
+              <h4>3Dは使えますか？</h4>
+              <p><em>現時点では非対応となります。</em></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="resume-item pb-0">
+              <h4>FLVには対応していますか？</h4>
+              <p><em>2020年8月頃を予定しております。</em></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="resume-item pb-0">
+              <h4>Flexには対応していますか？</h4>
+              <p><em>検証段階ですが、対応予定です。</em></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="resume-item pb-0">
+              <h4>AGALには対応していますか？</h4>
+              <p><em>現時点では非対応となります。</em></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="resume-item pb-0">
+              <h4>ストリーミング配信には対応していますか？</h4>
+              <p><em>現時点では非対応となります。</em></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End question and answer Section -->
+
+
+    <!-- ======= Achievements Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Achievements</h2>
+        </div>
+
+
+        <div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/achievement/bandai.jpg" class="img-fluid" alt="BANDAI NAMCO ONLINE">
+              <div class="portfolio-info">
+                <h4>BANDAI NAMCO ONLINE</h4>
+                <div class="portfolio-links">
+                  <a href="http://www.bandainamco-ol.co.jp" target="_blank"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End question and answer Section -->
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+        </div>
+
+        <div class="owl-carousel testimonials-carousel" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="testimonial-item">
+            <img src="assets/img/maintainer/001.jpg" class="testimonial-img" alt="Toshiyuki Ienaga">
+            <h3><a href="https://twitter.com/ienagatoshiyuki" target="_blank">Toshiyuki Ienaga</a></h3>
+            <h4>Lead Maintainer</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              2010年株式会社ソニックムーブに入社。インフラ・バックエンドのエンジニアとして従事。<br>
+              2013年からswf2jsの開発と研究を開始
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="assets/img/maintainer/004.jpg" class="testimonial-img" alt="SONICMOOV">
+            <h3><a href="https://www.sonicmoov.com/" target="_blank">SONICMOOV</a></h3>
+            <h4>Maintainer</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              株式会社ソニックムーブ<br>
+              WebGL and Application Engineer.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="assets/img/maintainer/002.png" class="testimonial-img" alt="yoya">
+            <h3><a href="https://twitter.com/yoya" target="_blank">yoya</a></h3>
+            <h4>Consulting</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              株式会社awm 代表取締役<br>
+              Multimedia Binary Engineer,  ImageMagick Watcher
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="assets/img/maintainer/003.jpg" class="testimonial-img" alt="Takuo Kihira">
+            <h3><a href="https://twitter.com/tkihira" target="_blank">Takuo Kihira</a></h3>
+            <h4>Supporter</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              HTML5 Engineer and Serial Entrepreneur.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Sales Partner</h2>
+        </div>
+
+        <div class="row mt-1">
+
+          <div class="col-lg-4">&nbsp;</div>
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>SONICMOOV., LTD.</h4>
+                <p>東京都新宿区築地町4番地<br>神楽坂テクノスビル3F</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email</h4>
+                <p>contact_ml@sonicmoov.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Call</h4>
+                <p>03-5206-7885</p>
+              </div>
+
+            </div>
+            <div class="col-lg-4">&nbsp;</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>swf2js</h3>
+      <p>
+        Adobe Animate(Flash)のSWFファイルをリアルタイムで解析し、HTMLに変換するJavaScript製のFlashPlayerエミュレーターです。<br>
+        Flex,Flash,Animate、全てのプラットフォームのSWFに対応しています。
+      </p>
+      <div class="social-links">
+        <a href="https://github.com/ienaga/swf2js" class="github"><i class="bx bxl-github"></i></a>
+        <a href="https://twitter.com/swf2js" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://swf2js.slack.com" class="slack"><i class="bx bxl-slack"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Toshiyuki Ienaga</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: [license-url] -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
