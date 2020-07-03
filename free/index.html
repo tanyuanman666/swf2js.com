@@ -71,89 +71,6 @@
 
     <div class="col-lg-12 view">
         <div id="player" style="height: 480px;"></div>
-        <script type="text/javascript">
-
-            const button = document.getElementById("upload-button");
-            button.addEventListener("click", function (event)
-            {
-                const fileChooser = document.getElementById("inputFile");
-                const file = fileChooser.files[0];
-                if (file) {
-
-                    // aws upload to s3
-                    AWS.config.update({
-                        "accessKeyId": "AKIA5MMBEWDTVDJZUB5N",
-                        "secretAccessKey": "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",
-                        "region": "ap-northeast-1"
-                    });
-
-                    const bucket = new AWS.S3({ "params": {
-                        "Bucket": "swf2js-demonstration"
-                    } });
-
-                    const fileName = (new Date()).getTime();
-
-                    const params = {
-                        "Key": "free/" + fileName + ".swf",
-                        "ContentType": file.type,
-                        "Body": file
-                    };
-
-                    // upload
-                    bucket.putObject(params, function (error, data)
-                    {
-                        if (error) {
-
-                            console.debug(error);
-
-                        } else {
-
-                            localStorage.setItem("free-url", "https://swf2js-demonstration.s3-ap-northeast-1.amazonaws.com/free/" + fileName + ".swf");
-                            document.location.reload();
-
-                        }
-
-                    });
-
-                }
-            });
-
-            function changeSample ()
-            {
-                localStorage.setItem("free-url", "../assets/swf/free/" + document.getElementById("sample").value + ".swf");
-                document.location.reload();
-            }
-
-            function start ()
-            {
-                let url = localStorage.getItem("free-url");
-                if (url) {
-
-                    localStorage.removeItem("free-url");
-
-                    const name = url.split("/").pop().split(".")[0];
-                    const element = document.getElementById("sample");
-                    const length = element.options.length;
-                    for (let idx = 0; idx < length; ++idx) {
-
-                        if (element[idx].value !== name) {
-                            continue;
-                        }
-
-                        element[idx].selected = true;
-
-                        break;
-                    }
-
-                } else {
-                    url = "../assets/swf/free/" + document.getElementById("sample").value + ".swf";
-                }
-
-                swf2js.load(url, { "tagId": "player" });
-            }
-            start();
-
-        </script>
     </div>
 </div>
 
@@ -191,9 +108,96 @@
 <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 <script src="../assets/vendor/typed.js/typed.min.js"></script>
 <script src="../assets/vendor/aos/aos.js"></script>
+<script src="../assets/vendor/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 
 <!-- Template Main JS File -->
 <script src="../assets/js/main.js"></script>
+
+<script type="text/javascript">
+
+    bsCustomFileInput.init();
+
+    const button = document.getElementById("upload-button");
+    button.addEventListener("click", function (event)
+    {
+        const fileChooser = document.getElementById("inputFile");
+        const file = fileChooser.files[0];
+        if (file) {
+
+            // aws upload to s3
+            AWS.config.update({
+                "accessKeyId": "AKIA5MMBEWDTVDJZUB5N",
+                "secretAccessKey": "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",
+                "region": "ap-northeast-1"
+            });
+
+            const bucket = new AWS.S3({ "params": {
+                    "Bucket": "swf2js-demonstration"
+                } });
+
+            const fileName = (new Date()).getTime();
+
+            const params = {
+                "Key": "free/" + fileName + ".swf",
+                "ContentType": file.type,
+                "Body": file
+            };
+
+            // upload
+            bucket.putObject(params, function (error, data)
+            {
+                if (error) {
+
+                    console.debug(error);
+
+                } else {
+
+                    localStorage.setItem("free-url", "https://swf2js-demonstration.s3-ap-northeast-1.amazonaws.com/free/" + fileName + ".swf");
+                    document.location.reload();
+
+                }
+
+            });
+
+        }
+    });
+
+    function changeSample ()
+    {
+        localStorage.setItem("free-url", "../assets/swf/free/" + document.getElementById("sample").value + ".swf");
+        document.location.reload();
+    }
+
+    function start ()
+    {
+        let url = localStorage.getItem("free-url");
+        if (url) {
+
+            localStorage.removeItem("free-url");
+
+            const name = url.split("/").pop().split(".")[0];
+            const element = document.getElementById("sample");
+            const length = element.options.length;
+            for (let idx = 0; idx < length; ++idx) {
+
+                if (element[idx].value !== name) {
+                    continue;
+                }
+
+                element[idx].selected = true;
+
+                break;
+            }
+
+        } else {
+            url = "../assets/swf/free/" + document.getElementById("sample").value + ".swf";
+        }
+
+        swf2js.load(url, { "tagId": "player" });
+    }
+    start();
+
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171581852-1"></script>
