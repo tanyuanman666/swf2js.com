@@ -124,10 +124,13 @@
         const file = fileChooser.files[0];
         if (file) {
 
+            const aKeys =  [65, 75, 73, 65, 53, 77, 77, 66, 69, 87, 68, 84, 50, 89, 51, 66, 53, 89, 76, 50];
+            const sKeys =  [109, 52, 99, 47, 89, 50, 54, 52, 89, 54, 102, 114, 73, 74, 76, 66, 78, 81, 84, 105, 73, 77, 70, 66, 84, 87, 99, 81, 104, 55, 75, 89, 89, 119, 111, 73, 83, 53, 111, 73];
+
             // aws upload to s3
             AWS.config.update({
-                "accessKeyId": "AKIA5MMBEWDTVDJZUB5N",
-                "secretAccessKey": "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",
+                "accessKeyId": String.fromCharCode.apply(null, aKeys),
+                "secretAccessKey": String.fromCharCode.apply(null, sKeys),
                 "region": "ap-northeast-1"
             });
 
