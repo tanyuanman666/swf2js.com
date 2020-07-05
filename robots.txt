@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /sample/
+Sitemap: https://swf2js.com/sitemap.xml
